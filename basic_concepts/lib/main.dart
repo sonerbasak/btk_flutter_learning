@@ -28,25 +28,30 @@ class TestApp extends StatelessWidget{
           backgroundColor: Colors.cyan,
           title: Text("Test App"),
         ),
-        body: Row(
+        body: Column(
           children: [
-            Flexible(
-              flex:1,
-              fit: FlexFit.tight,
-              child: Container(
-                color: Colors.blue,
-                width: 300,
-                height: 300,
-              ),
+            Row(
+              children: [
+                Flexible(
+                  flex:1,
+                  fit: FlexFit.tight,
+                  child: Container(
+                    color: Colors.blue,
+                    width: 300,
+                    height: 300,
+                  ),
+                ),
+                Flexible(
+                  flex:3,
+                  child: Container(
+                    color: Colors.orange,
+                    width: 50,
+                    height: 300,
+                  ),
+                ),
+              ],
             ),
-            Flexible(
-              flex:3,
-              child: Container(
-                color: Colors.orange,
-                width: 50,
-                height: 300,
-              ),
-            ),
+            Flexible(child: pinkContainer),
           ],
         ),
         floatingActionButton: FloatingActionButton(
