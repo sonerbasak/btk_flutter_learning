@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:statefull/dropdown_popup.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -15,15 +13,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.purple, 
-        useMaterial3: false),
-      home: HomePage(),
+        primarySwatch: Colors.purple,
+        textTheme: TextTheme(
+          labelLarge: TextStyle(
+            color: Theme.of(context).colorScheme.primary,
+            fontSize: 24,
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+        ),
+        useMaterial3: false,
+      ),
+      home: DropdownPopup(),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -35,7 +43,7 @@ class _HomePageState extends State<HomePage> {
   void _sayaciArttir() {
     setState(() {
       _sayac++;
-      debugPrint("Sayac: $_sayac");      
+      debugPrint("Sayac: $_sayac");
     });
   }
 
@@ -44,17 +52,19 @@ class _HomePageState extends State<HomePage> {
       if (_sayac > 0) {
         _sayac--;
         debugPrint("Sayac: $_sayac");
-      }      
+      }
     });
   }
+
   void _sayaciSifirla() {
     setState(() {
       if (_sayac != 0) {
         _sayac = 0;
         debugPrint("Sayac: $_sayac");
-      }      
+      }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,32 +73,42 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Butona basılma miktarı:", style: Theme.of(context).textTheme.labelLarge),
-            Text(_sayac.toString(), style: Theme.of(context).textTheme.displayMedium?.copyWith(
-              color: _sayac <= 0 ? Colors.red : Colors.green,
-            )),
-          ]
+            Text(
+              "Butona basılma miktarı:",
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
+            Text(
+              _sayac.toString(),
+              style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                color: _sayac <= 0 ? Colors.red : Colors.green,
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(onPressed: () {
-            _sayaciArttir();
-          }, 
-          child: Icon(Icons.add)),
+          FloatingActionButton(
+            onPressed: () {
+              _sayaciArttir();
+            },
+            child: Icon(Icons.add),
+          ),
           SizedBox(height: 10),
           FloatingActionButton(
             onPressed: () {
-            _sayaciAzalt();
-          }, 
-          child: Icon(Icons.remove)),
+              _sayaciAzalt();
+            },
+            child: Icon(Icons.remove),
+          ),
           SizedBox(height: 10),
           FloatingActionButton(
             onPressed: () {
-            _sayaciSifirla();
-          }, 
-          child: Icon(Icons.refresh)),
+              _sayaciSifirla();
+            },
+            child: Icon(Icons.refresh),
+          ),
         ],
       ),
     );
