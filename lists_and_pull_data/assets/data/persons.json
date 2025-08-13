@@ -1,0 +1,145 @@
+{
+    "persons": [
+        {
+            "id": 1,
+            "isim": "Ayşe Yılmaz",
+            "sevdiği_renkler": [
+                "mavi",
+                "yeşil"
+            ],
+            "adres": {
+                "sokak": "Menekşe Sokak",
+                "no": "7",
+                "ilçe": "Kadıköy",
+                "il": "İstanbul"
+            }
+        },
+        {
+            "id": 2,
+            "isim": "Mehmet Kaya",
+            "sevdiği_renkler": [
+                "kırmızı",
+                "siyah",
+                "beyaz"
+            ],
+            "adres": {
+                "sokak": "Atatürk Caddesi",
+                "no": "42",
+                "ilçe": "Çankaya",
+                "il": "Ankara"
+            }
+        },
+        {
+            "id": 3,
+            "isim": "Fatma Demir",
+            "sevdiği_renkler": [
+                "mor",
+                "pembe"
+            ],
+            "adres": {
+                "sokak": "Barış Sokak",
+                "no": "15/A",
+                "ilçe": "Bornova",
+                "il": "İzmir"
+            }
+        },
+        {
+            "id": 4,
+            "isim": "Ahmet Çelik",
+            "sevdiği_renkler": [
+                "turuncu",
+                "sarı"
+            ],
+            "adres": {
+                "sokak": "Güneş Mahallesi",
+                "no": "23",
+                "ilçe": "Nilüfer",
+                "il": "Bursa"
+            }
+        },
+        {
+            "id": 5,
+            "isim": "Zeynep Arslan",
+            "sevdiği_renkler": [
+                "lacivert"
+            ],
+            "adres": {
+                "sokak": "Lale Caddesi",
+                "no": "11",
+                "ilçe": "Muratpaşa",
+                "il": "Antalya"
+            }
+        },
+        {
+            "id": 6,
+            "isim": "Hasan Şahin",
+            "sevdiği_renkler": [
+                "gri",
+                "kahverengi"
+            ],
+            "adres": {
+                "sokak": "Okul Yolu Sokak",
+                "no": "33",
+                "ilçe": "Seyhan",
+                "il": "Adana"
+            }
+        },
+        {
+            "id": 7,
+            "isim": "Emine Öztürk",
+            "sevdiği_renkler": [
+                "mavi",
+                "turkuaz"
+            ],
+            "adres": {
+                "sokak": "Uğur Sokak",
+                "no": "5/C",
+                "ilçe": "Tepebaşı",
+                "il": "Eskişehir"
+            }
+        },
+        {
+            "id": 8,
+            "isim": "Mustafa Koç",
+            "sevdiği_renkler": [
+                "siyah",
+                "kırmızı"
+            ],
+            "adres": {
+                "sokak": "Huzur Mahallesi",
+                "no": "19",
+                "ilçe": "Şehitkamil",
+                "il": "Gaziantep"
+            }
+        },
+        {
+            "id": 9,
+            "isim": "Selin Pektaş",
+            "sevdiği_renkler": [
+                "pembe",
+                "mor",
+                "beyaz"
+            ],
+            "adres": {
+                "sokak": "Yeni Caddesi",
+                "no": "27",
+                "ilçe": "İlkadım",
+                "il": "Samsun"
+            }
+        },
+        {
+            "id": 10,
+            "isim": "Can Yılmaz",
+            "sevdiği_renkler": [
+                "mavi",
+                "sarı"
+            ],
+            "adres": {
+                "sokak": "Gül Sokak",
+                "no": "8",
+                "ilçe": "Konyaaltı",
+                "il": "Antalya"
+            }
+        }
+    ]
+}
